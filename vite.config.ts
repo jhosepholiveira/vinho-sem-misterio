@@ -34,6 +34,11 @@ const localBindingConfig = {
 };
 
 export default defineConfig(async () => {
+  // Hostinger runs a Node.js server; keep Cloudflare's Worker build for Sites.
+  if (process.env.VINHO_DEPLOY_TARGET === "node") {
+    return { plugins: [vinext(), sites()] };
+  }
+
   // Keep Wrangler and Miniflare state project-local. These are non-secret tool
   // settings; application environment belongs in ignored `.env*` files.
   process.env.WRANGLER_WRITE_LOGS ??= "false";
