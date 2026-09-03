@@ -26,19 +26,22 @@ Configure a aplicação Node.js no hPanel com:
 | Node.js | 22.x (22.13.0 ou superior) |
 | Diretório raiz | ./ |
 | Gerenciador de pacotes | npm |
-| Comando de construção | npm run build:hostinger |
+| Comando de construção | npm run build |
 | Diretório de saída | dist/standalone |
 | Arquivo de entrada | dist/standalone/server.js |
 
 O arquivo de entrada é relativo à raiz da aplicação e não inclui o comando `node`.
-O build específico gera um pacote Node.js com servidor, arquivos públicos e
+O comando padrão `npm run build` chama `build:hostinger` e gera um pacote Node.js
+com servidor, arquivos públicos e
 dependências de execução. O log deve confirmar `Generated standalone output in
 dist/standalone/`. A pasta é gerada durante a compilação, não é uma pasta a
 selecionar no repositório. Para iniciar o pacote na raiz do projeto, execute
-`npm run start:hostinger`.
+`npm start`. Os comandos `npm run build:hostinger` e `npm run start:hostinger`
+também continuam disponíveis.
 
 O servidor usa `PORT` fornecida pelo ambiente (padrão 3000) e `HOST` (padrão
-0.0.0.0). O build padrão continua disponível para o ambiente Sites/Cloudflare.
+0.0.0.0). Para o ambiente Sites/Cloudflare, use `npm run build:sites`.
+O comando `npm test` continua usando esse build para os testes do Worker.
 
 ## Estrutura
 
