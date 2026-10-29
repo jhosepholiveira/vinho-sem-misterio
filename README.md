@@ -43,15 +43,32 @@ O servidor usa `PORT` fornecida pelo ambiente (padrão 3000) e `HOST` (padrão
 0.0.0.0). Para o ambiente Sites/Cloudflare, use `npm run build:sites`.
 O comando `npm test` continua usando esse build para os testes do Worker.
 
+## O que há no livro
+
+- **88 capítulos** em oito partes (fundamentos, degustação, 15 uvas, 11 países, harmonização, compra, adega e nível avançado), cada um com texto, “em poucas palavras”, erro comum, experiência prática com anotações salvas e quiz explicado.
+- **Explorar**: fichas de 15 uvas, comparador visual de 2 a 3 uvas e 11 países com mais de 30 regiões.
+- **Praticar**: ficha de degustação (criar, editar, favoritar, excluir) e harmonizador com 20 pratos, incluindo cozinha nordestina.
+- **Jornada**: 5 níveis (Curioso → Connoisseur), pontos, conquistas, perfil sensorial e cópia de segurança do diário (exportar/importar JSON).
+- **Biblioteca**: glossário com mais de 40 termos e busca global (Ctrl+K / ⌘K) sem distinção de acentos.
+
+As telas usam endereços com hash (`#/capitulo/acidez`, `#/uvas/merlot`, `#/regioes/brasil`), então o botão voltar, o recarregar e o compartilhamento de links funcionam sem mudar a hospedagem.
+
 ## Estrutura
 
-- `app/`: experiência e estilos.
-- `content/`: uvas, glossário e harmonizações.
-- `repositories/`: persistência das degustações.
+- `app/`: casca da aplicação (`page.tsx` faz o roteamento) e estilos (`book.css` concentra os módulos novos).
+- `components/book/`: telas — `Home`, `Learn` (índice, leitor e quiz), `Explore` (uvas, comparador, regiões), `Practice` (ficha e harmonizador), `Journey`, `Glossary`, `Navigation` (menu e busca) e `router`.
+- `content/`: conteúdo editorial tipado — `chapters/` (um arquivo por parte), `grapes.ts`, `countries.ts`, `glossary.ts`, `pairings.ts`.
+- `lib/`: `progress.ts` (níveis, pontos, conquistas, perfil sensorial — funções puras e testadas) e `book-store.ts` (progresso, quizzes e anotações no LocalStorage).
+- `repositories/`: `WineRepository`, a única peça que conhece o armazenamento das degustações.
+- `tests/`: integridade do conteúdo, progresso, repository e HTML renderizado.
 - `docs/`: arquitetura, conteúdo, visual, imagens e roadmap.
 
-## Conteúdo
+## Como adicionar conteúdo
 
-Para adicionar uma uva, inclua um objeto tipado em `content/wine-data.ts`. Para um capítulo, mantenha conceito simples, aprofundamento, experiência prática, quiz explicado e conclusão. Quizzes devem sempre explicar a resposta.
+- **Uva**: inclua um objeto em `content/grapes.ts` (escalas de 1 a 5, história, aromas e 3 perguntas). A ficha, o comparador, a busca e o capítulo da Parte III são gerados automaticamente.
+- **País ou região**: edite `content/countries.ts`; o capítulo da Parte IV e a página do país vêm daí.
+- **Capítulo**: adicione um objeto no arquivo da parte em `content/chapters/`. Parágrafos iniciados por `## ` viram subtítulos. Todo quiz precisa de explicação; a ordem das alternativas é embaralhada automaticamente.
+- **Termo do glossário**: `content/glossary.ts`. **Prato**: `content/pairings.ts`.
+- Rode `npm test`: os testes acusam slugs repetidos, respostas inválidas e links relacionados quebrados.
 
-O MVP inclui home, primeiro capítulo, catálogo e comparador de uvas, ficha de degustação persistente, harmonizador, quiz, glossário pesquisável e progresso básico.
+Para Open Graph com imagem, defina `NEXT_PUBLIC_SITE_URL` (ex.: `https://seu-dominio.com.br`) nas variáveis de ambiente da hospedagem.

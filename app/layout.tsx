@@ -1,6 +1,43 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import "./chapters.css";
 import "./editorial.css";
-export const metadata:Metadata={title:"Vinho sem Mistério — Da primeira taça ao conhecimento",description:"Aprenda a escolher, degustar, entender e harmonizar vinhos em uma jornada prática e visual.",applicationName:"Vinho sem Mistério",keywords:["vinho","degustação","uvas","harmonização"],other:{"codex-preview":"development","theme-color":"#541d2c"}};
-export default function RootLayout({children}:Readonly<{children:React.ReactNode}>){return <html lang="pt-BR"><body>{children}</body></html>}
+import "./book.css";
+
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
+const title = "Vinho sem Mistério — Da primeira taça ao conhecimento";
+const description = "Livro web interativo para aprender vinho: 88 capítulos, 15 uvas, 11 países, quizzes, harmonizador e diário de degustação.";
+
+export const metadata: Metadata = {
+  ...(siteUrl ? { metadataBase: new URL(siteUrl) } : {}),
+  title,
+  description,
+  applicationName: "Vinho sem Mistério",
+  keywords: ["vinho", "degustação", "uvas", "harmonização", "sommelier", "curso de vinho", "vinhos brasileiros"],
+  manifest: "/manifest.webmanifest",
+  icons: { icon: "/favicon.svg", apple: "/icon-192.png" },
+  openGraph: {
+    type: "website",
+    locale: "pt_BR",
+    siteName: "Vinho sem Mistério",
+    title,
+    description,
+    ...(siteUrl ? { images: [{ url: "/wine-hero.jpg", width: 1600, height: 1000, alt: "Taça de vinho tinto ao lado de uma videira" }] } : {}),
+  },
+  twitter: { card: "summary_large_image", title, description },
+  appleWebApp: { capable: true, title: "Vinho sem Mistério", statusBarStyle: "default" },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#541d2c",
+  width: "device-width",
+  initialScale: 1,
+};
+
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  return (
+    <html lang="pt-BR">
+      <body>{children}</body>
+    </html>
+  );
+}

@@ -1,0 +1,331 @@
+import { q, tf } from "../helpers";
+import type { ChapterSeed } from "../types";
+
+export const part6: ChapterSeed[] = [
+  {
+    title: "Comprar no supermercado",
+    intro: "É possível sair bem do supermercado — com algumas pistas.",
+    body: [
+      "Prefira garrafas armazenadas em pé por pouco tempo, longe de luz direta e de calor. Evite as que ficam em vitrines ensolaradas ou perto de iluminação forte.",
+      "Para o dia a dia, procure safras recentes, sobretudo em brancos, rosés e espumantes. Regiões menos famosas e uvas menos badaladas costumam oferecer melhor relação qualidade-preço.",
+      "Observe a importadora no contrarrótulo: algumas fazem curadoria cuidadosa, e reconhecer as boas é um atalho valioso.",
+    ],
+    takeaway: "No supermercado, olhe a conservação, prefira safras recentes e confie em boas importadoras.",
+    practice: "Na próxima ida ao mercado, anote três importadoras que aparecem com frequência e prove um vinho de cada.",
+    mistake: "Comprar brancos e rosés antigos em promoção. Eles costumam perder frescor.",
+    quiz: [
+      q("Que tipo de safra é mais segura para brancos de consumo diário?", ["Recente", "Muito antiga", "Sem importância", "A mais cara"], 0, "Brancos leves são melhores jovens."),
+      q("O que a importadora no contrarrótulo pode indicar?", ["A curadoria por trás do vinho", "A doçura", "A cor", "Nada"], 0, "Boas importadoras selecionam produtores com critério."),
+      tf("Garrafas expostas ao sol e ao calor podem estar comprometidas.", true, "Calor e luz aceleram a degradação do vinho."),
+    ],
+  },
+  {
+    title: "Loja especializada",
+    intro: "O melhor recurso de uma boa loja são as pessoas que trabalham nela.",
+    body: [
+      "Um bom vendedor pergunta antes de indicar: para qual ocasião, com qual comida, que estilos você já gostou, qual o orçamento. Responda com sinceridade — inclusive sobre o preço.",
+      "Lojas especializadas costumam conservar melhor os vinhos e oferecer produtores pequenos que não chegam ao supermercado. Muitas promovem degustações, ótimas para aprender sem comprar garrafas inteiras.",
+      "Leve seu registro de degustações: mostrar o que você gostou ajuda o vendedor a acertar.",
+    ],
+    takeaway: "Descreva ocasião, comida, gosto e orçamento; deixe a loja trabalhar a seu favor.",
+    practice: "Vá a uma loja com um orçamento definido e peça duas sugestões: uma segura e uma para sair da zona de conforto.",
+    mistake: "Ter vergonha de dizer o orçamento. Isso só dificulta uma boa indicação.",
+    quiz: [
+      q("O que ajuda o vendedor a indicar um bom vinho?", ["Dizer apenas “o melhor”", "Informar ocasião, comida, gosto e orçamento", "Escolher pelo rótulo", "Pedir o mais caro"], 1, "Contexto é tudo para uma boa indicação."),
+      tf("Lojas especializadas podem oferecer produtores menores que não chegam ao supermercado.", true, "É uma das vantagens da curadoria."),
+      q("Qual é uma boa estratégia ao pedir sugestões?", ["Pedir uma opção segura e uma nova", "Pedir só o rótulo mais famoso", "Não comentar o gosto", "Comprar sem provar nunca"], 0, "Assim você aprende sem grande risco."),
+    ],
+  },
+  {
+    title: "Escolher no restaurante",
+    intro: "A carta de vinhos não precisa intimidar.",
+    body: [
+      "Peça ajuda ao sommelier ou ao garçom. Indique o prato, o estilo que procura e uma faixa de preço — apontar um valor na carta é uma forma discreta de fazer isso.",
+      "Quando o vinho chega, confira se é o rótulo e a safra pedidos. A prova serve para verificar defeitos, como cheiro de rolha ou de vinagre, e não se você gostou do estilo.",
+      "Vinho em taça é ótimo para experimentar sem compromisso. E, se o restaurante permitir levar o seu, pergunte a taxa de rolha antes.",
+    ],
+    takeaway: "Informe prato, estilo e faixa de preço; a prova serve para checar defeitos, não gosto.",
+    practice: "No próximo restaurante, peça uma sugestão ao sommelier apontando discretamente um preço na carta.",
+    mistake: "Devolver um vinho só porque não agradou ao seu gosto, sem defeito.",
+    quiz: [
+      q("Para que serve a prova do vinho no restaurante?", ["Para ver se gostou do estilo", "Para verificar defeitos", "Para conferir o preço", "Para esfriar o vinho"], 1, "A prova verifica se o vinho está em boas condições."),
+      q("Como indicar o orçamento com discrição?", ["Apontando um preço na carta", "Pedindo o mais barato em voz alta", "Não indicando", "Escrevendo um bilhete"], 0, "O sommelier entende a faixa sugerida."),
+      tf("Cheiro de rolha ou de vinagre é motivo legítimo para recusar o vinho.", true, "São defeitos, não questão de gosto."),
+    ],
+  },
+  {
+    title: "Comprar em e-commerce",
+    intro: "Comodidade e variedade, desde que com atenção à loja e à entrega.",
+    body: [
+      "Prefira lojas com boa reputação, política clara de trocas e informações completas: produtor, safra, uva, região e teor alcoólico. Desconfie de fotos genéricas sem safra.",
+      "Calor é inimigo do vinho no transporte. Em meses quentes, evite que as caixas fiquem dias em depósitos ou veículos sem climatização, e guarde as garrafas logo ao receber.",
+      "Clubes de assinatura podem ser uma ótima forma de descobrir rótulos, sobretudo se enviarem fichas explicativas.",
+    ],
+    takeaway: "Compre de lojas confiáveis, confira safra e detalhes, e proteja as garrafas do calor.",
+    practice: "Compare a ficha de um mesmo vinho em duas lojas on-line. Qual oferece informações mais completas?",
+    mistake: "Comprar sem conferir a safra anunciada.",
+    quiz: [
+      q("O que observar numa loja on-line?", ["Apenas o desconto", "Reputação, informações completas e política de trocas", "O tamanho da foto", "Nada"], 1, "Transparência indica seriedade."),
+      tf("O calor durante o transporte pode prejudicar o vinho.", true, "Altas temperaturas aceleram a oxidação."),
+      q("Qual é uma vantagem de clubes de assinatura?", ["Garantem o vinho mais caro", "Ajudam a descobrir rótulos novos", "Dispensam provar", "Eliminam a safra"], 1, "São uma forma prática de explorar."),
+    ],
+  },
+  {
+    title: "Entender rótulos",
+    intro: "Aprofundando a leitura: termos que aparecem com frequência.",
+    body: [
+      "Reserva, Gran Reserva e Riserva têm regras legais em países como Espanha, Portugal e Itália, ligadas a tempo de envelhecimento. Em muitos países do Novo Mundo, são termos livres.",
+      "Termos como “vinhas velhas”, “vinho de altitude” ou “single vineyard” descrevem a origem das uvas. “Sur lie”, “non filtré” e “barrica” falam da elaboração.",
+      "O selo de denominação de origem garante a procedência e regras de produção, mas não garante que o vinho agradará você.",
+    ],
+    takeaway: "Alguns termos têm valor legal; outros são apenas descritivos ou de marketing.",
+    practice: "Escolha três rótulos e sublinhe as palavras que você não conhece. Busque cada uma no glossário.",
+    mistake: "Supor que “Reserva” sempre indica um vinho superior.",
+    quiz: [
+      q("Em qual destes países “Gran Reserva” tem regra legal?", ["Espanha", "Estados Unidos", "Austrália", "Em nenhum"], 0, "Na Espanha, a categoria tem tempos mínimos de envelhecimento."),
+      tf("Um selo de denominação garante que o vinho vai agradar.", false, "Garante procedência e regras, não gosto."),
+      q("O que indica “single vineyard”?", ["Uvas de um único vinhedo", "Uma única uva", "Um único ano de barrica", "Vinho sem álcool"], 0, "Descreve a origem precisa das uvas."),
+    ],
+  },
+  {
+    title: "Avaliar a safra",
+    intro: "Quando a safra importa — e quando não.",
+    body: [
+      "Em regiões de clima instável, safras variam bastante. Tabelas de safra publicadas por críticos e entidades ajudam a ter uma visão geral, mas são médias: bons produtores fazem bons vinhos até em anos difíceis.",
+      "Para vinhos de consumo diário, a safra serve principalmente para saber se o vinho ainda está jovem. Para vinhos de guarda, ajuda a decidir quando abrir.",
+      "Safras consideradas “menores” podem ser ótimas oportunidades: vinhos mais leves, prontos antes e muitas vezes mais baratos.",
+    ],
+    takeaway: "Safra pesa mais em regiões instáveis e em vinhos de guarda; o produtor pesa mais que a tabela.",
+    practice: "Procure uma tabela de safras de uma região que você gosta e compare duas safras de um mesmo produtor.",
+    mistake: "Descartar uma safra inteira só pela fama ruim.",
+    quiz: [
+      q("O que pesa mais que a tabela de safras?", ["A cor da garrafa", "A qualidade do produtor", "O formato da rolha", "O preço do frete"], 1, "Bons produtores fazem bons vinhos em anos difíceis."),
+      tf("Safras consideradas menores podem ser boas oportunidades.", true, "Costumam gerar vinhos prontos mais cedo e mais baratos."),
+      q("Para vinhos de consumo diário, a safra serve principalmente para...", ["Saber se o vinho está jovem", "Saber a cor", "Saber o produtor", "Nada"], 0, "Esses vinhos são melhores jovens."),
+    ],
+  },
+  {
+    title: "Conhecer o produtor",
+    intro: "Ao longo do tempo, o nome do produtor vira a pista mais confiável.",
+    body: [
+      "Cada produtor tem um estilo: mais ou menos madeira, mais ou menos maturação, mais intervenção ou menos. Quando você gosta de um vinho, vale experimentar outros rótulos da mesma casa.",
+      "Grandes vinícolas oferecem regularidade; pequenos produtores, muitas vezes, mais singularidade. Cooperativas podem oferecer excelente valor.",
+      "Visitas, sites e redes sociais dos produtores ajudam a entender filosofia e práticas — e o enoturismo, no Brasil, é uma ótima forma de aprender.",
+    ],
+    takeaway: "Produtor é estilo; quando gostar de um vinho, explore a linha da mesma casa.",
+    practice: "Escolha um produtor de que você gostou e prove outro rótulo dele, de outra uva ou faixa de preço.",
+    mistake: "Julgar um produtor por um único rótulo.",
+    quiz: [
+      q("Ao gostar de um vinho, uma boa estratégia é...", ["Provar outros rótulos do mesmo produtor", "Nunca mais comprar", "Mudar de país", "Comprar só a mesma safra"], 0, "O estilo do produtor costuma se repetir."),
+      tf("Cooperativas podem oferecer excelente relação qualidade-preço.", true, "Muitas reúnem bons vinhedos de pequenos agricultores."),
+      q("O que pequenos produtores costumam oferecer?", ["Regularidade industrial", "Mais singularidade", "Sempre vinhos baratos", "Apenas espumantes"], 1, "Escala menor permite estilos mais pessoais."),
+    ],
+  },
+  {
+    title: "Denominação de origem",
+    intro: "Nome de lugar protegido: uma promessa sobre origem e método.",
+    body: [
+      "Uma denominação delimita uma área e define regras: uvas permitidas, rendimento, métodos e tempo de envelhecimento. AOC/AOP na França, DOC e DOCG na Itália, DO e DOCa na Espanha, DOC em Portugal.",
+      "No Brasil, há Indicações de Procedência, como Pinto Bandeira, Altos Montes, Farroupilha e Campanha Gaúcha, e Denominações de Origem, como o Vale dos Vinhedos.",
+      "A denominação ajuda a prever o estilo: quem lê “Chablis” deve esperar um Chardonnay fresco; “Rioja”, um tinto com base em Tempranillo.",
+    ],
+    takeaway: "Denominações protegem nomes de lugares e definem regras que antecipam o estilo.",
+    practice: "Encontre dois vinhos brasileiros com Indicação de Procedência ou Denominação de Origem e compare os rótulos.",
+    mistake: "Ignorar a denominação e procurar só o nome da uva.",
+    quiz: [
+      q("Qual destas é uma Denominação de Origem brasileira?", ["Vale dos Vinhedos", "Napa Valley", "Rioja", "Chablis"], 0, "O Vale dos Vinhedos tornou-se DO em 2012."),
+      q("O que uma denominação costuma regulamentar?", ["Uvas, rendimento e métodos", "A cor do rótulo", "O preço de venda", "A taça de serviço"], 0, "Ela define regras de produção."),
+      tf("Quem lê “Chablis” no rótulo deve esperar um Chardonnay.", true, "A denominação define a uva permitida."),
+    ],
+  },
+  {
+    title: "Pontuações, preço e qualidade",
+    intro: "Notas de críticos são opiniões úteis — não verdades absolutas.",
+    body: [
+      "Escalas de 100 pontos são comuns, mas na prática quase todos os vinhos avaliados ficam entre 80 e 100. Uma diferença de dois pontos raramente significa muito.",
+      "Cada crítico tem preferências. Descubra se o gosto de um avaliador se parece com o seu antes de seguir suas notas.",
+      "O vinho de melhor valor é aquele que entrega muito prazer, para você, pelo preço pago. Sua ficha de degustação é a melhor pontuação de todas.",
+    ],
+    takeaway: "Pontuações orientam, mas seu registro pessoal diz mais sobre o que vale a pena para você.",
+    practice: "Compare a nota de um crítico com a sua nota para o mesmo vinho. Vocês concordam?",
+    mistake: "Comprar apenas por pontuação, sem considerar estilo e ocasião.",
+    quiz: [
+      q("Como usar pontuações de críticos?", ["Como verdade absoluta", "Como opinião útil, conhecendo o gosto do crítico", "Ignorando sempre", "Somente para vinhos baratos"], 1, "Cada crítico tem preferências próprias."),
+      tf("Dois pontos de diferença costumam indicar vinhos muito diferentes.", false, "Pequenas diferenças raramente são significativas."),
+      q("O que define um vinho de bom valor?", ["O preço mais alto", "Muito prazer para você pelo preço pago", "A pontuação mais alta", "A garrafa mais pesada"], 1, "Valor é relação entre prazer e preço."),
+    ],
+  },
+];
+
+export const part7: ChapterSeed[] = [
+  {
+    title: "Armazenamento",
+    intro: "Os inimigos do vinho guardado são calor, luz, vibração e variações bruscas.",
+    body: [
+      "O ideal é um lugar escuro, fresco, sem cheiros fortes e com temperatura estável. Um armário longe da cozinha e de paredes que recebem sol é melhor que uma prateleira decorativa na sala.",
+      "Vibração constante, como em cima da geladeira, perturba o vinho. Cheiros fortes, como de produtos de limpeza, podem atravessar rolhas ao longo do tempo.",
+      "Lembre que a maioria dos vinhos não precisa de guarda longa: são feitos para ser bebidos em até dois ou três anos.",
+    ],
+    takeaway: "Guarde no escuro, no fresco, sem vibração e com temperatura estável.",
+    practice: "Escolha o lugar mais fresco e escuro da sua casa e meça a temperatura em diferentes horários.",
+    mistake: "Guardar vinhos em cima da geladeira ou em prateleiras ensolaradas.",
+    quiz: [
+      q("Qual destes é inimigo do vinho guardado?", ["Escuridão", "Temperatura estável", "Calor", "Silêncio"], 2, "O calor acelera o envelhecimento e pode estragar o vinho."),
+      tf("Cima da geladeira é um bom lugar para guardar vinho.", false, "Há calor e vibração."),
+      q("Por quanto tempo a maioria dos vinhos deve ser guardada?", ["Décadas", "Poucos anos", "Nunca deve ser aberta", "Exatamente dez anos"], 1, "A maior parte é feita para consumo jovem."),
+    ],
+  },
+  {
+    title: "Temperatura de guarda",
+    intro: "Estabilidade importa mais que o número exato.",
+    body: [
+      "A referência clássica para guarda é entre 12 °C e 15 °C. Mas uma temperatura um pouco mais alta e estável é menos prejudicial que oscilações diárias grandes.",
+      "Variações fazem o vinho expandir e contrair, o que pode empurrar a rolha e permitir a entrada de ar. Acima de 25 °C de forma prolongada, o risco de dano cresce bastante.",
+      "No clima brasileiro, para guardar por mais de alguns meses, uma adega climatizada faz diferença.",
+    ],
+    takeaway: "Busque 12–15 °C, mas, acima de tudo, estabilidade.",
+    practice: "Use um termômetro simples no local onde guarda seus vinhos por uma semana e anote a variação.",
+    mistake: "Guardar vinhos em locais que esquentam muito durante a tarde.",
+    quiz: [
+      q("Qual é a faixa clássica de temperatura de guarda?", ["2–5 °C", "12–15 °C", "20–25 °C", "30 °C"], 1, "É a faixa de referência para adegas."),
+      tf("Grandes oscilações de temperatura são mais prejudiciais que uma temperatura estável um pouco mais alta.", true, "A variação faz o vinho expandir e contrair."),
+      q("O que oscilações podem causar?", ["Entrada de ar pela rolha", "Mais cor", "Mais doçura", "Nada"], 0, "A expansão e a contração forçam a rolha."),
+    ],
+  },
+  {
+    title: "Posição da garrafa",
+    intro: "Deitada ou em pé? Depende da vedação e do tempo.",
+    body: [
+      "Garrafas com rolha de cortiça devem ficar deitadas durante guardas longas, para que a rolha permaneça úmida e não resseque.",
+      "Tampas de rosca e rolhas sintéticas podem ficar em pé sem problema. Por períodos curtos, de algumas semanas, a posição faz pouca diferença.",
+      "Antes de servir vinhos antigos com sedimento, deixe a garrafa em pé por um dia para que o depósito se acumule no fundo.",
+    ],
+    takeaway: "Cortiça em guarda longa: deitada; rosca: tanto faz.",
+    practice: "Verifique as vedações das garrafas que você tem e organize as de cortiça deitadas.",
+    mistake: "Deixar vinhos com cortiça em pé por anos.",
+    quiz: [
+      q("Por que guardar garrafas com cortiça deitadas?", ["Para ocupar menos espaço", "Para manter a rolha úmida", "Para o vinho envelhecer mais rápido", "Por estética"], 1, "Uma rolha ressecada pode deixar o ar entrar."),
+      tf("Tampas de rosca podem ficar em pé.", true, "Elas não dependem de umidade."),
+      q("O que fazer antes de servir um vinho antigo com sedimento?", ["Agitar bem", "Deixar a garrafa em pé por um dia", "Congelar", "Aquecer"], 1, "O depósito se acumula no fundo."),
+    ],
+  },
+  {
+    title: "Luz",
+    intro: "A luz, sobretudo a ultravioleta, degrada o vinho.",
+    body: [
+      "A exposição à luz pode gerar o chamado “gosto de luz”, com aromas de repolho cozido ou papelão molhado, especialmente em brancos e espumantes em garrafas claras.",
+      "Por isso muitas garrafas são verdes ou marrons. Ainda assim, nenhuma garrafa protege totalmente.",
+      "Guarde vinhos no escuro e evite expô-los por muito tempo a lâmpadas fortes e à luz do sol.",
+    ],
+    takeaway: "Escuro é o melhor ambiente; garrafas claras são as mais vulneráveis.",
+    practice: "Observe as cores das garrafas dos seus vinhos e reorganize as transparentes para o lugar mais escuro.",
+    mistake: "Deixar espumantes em garrafas claras em vitrines iluminadas.",
+    quiz: [
+      q("Quais vinhos são mais vulneráveis à luz?", ["Tintos em garrafas escuras", "Brancos e espumantes em garrafas claras", "Fortificados", "Nenhum"], 1, "Garrafas claras protegem menos."),
+      tf("Garrafas escuras protegem totalmente contra a luz.", false, "Protegem mais, mas não totalmente."),
+      q("Que aroma o “gosto de luz” pode gerar?", ["Morango fresco", "Repolho cozido", "Baunilha", "Mel"], 1, "É um defeito causado pela luz."),
+    ],
+  },
+  {
+    title: "Umidade",
+    intro: "Umidade moderada protege a rolha; excesso, o rótulo.",
+    body: [
+      "Para guardas longas, recomenda-se umidade relativa em torno de 60% a 70%. Ar muito seco pode ressecar a rolha.",
+      "Umidade excessiva favorece mofo, que costuma afetar mais rótulos e caixas que o vinho em si.",
+      "Na maior parte do Brasil, a umidade raramente é problema para guardas de curto e médio prazo; o calor preocupa muito mais.",
+    ],
+    takeaway: "Algo entre 60% e 70% de umidade é o ideal para guardas longas.",
+    practice: "Se tiver um higrômetro, meça a umidade do local de guarda.",
+    mistake: "Preocupar-se com umidade e esquecer do calor.",
+    quiz: [
+      q("Qual faixa de umidade é recomendada para guarda longa?", ["10–20%", "60–70%", "95–100%", "Não importa"], 1, "Mantém a rolha em boas condições."),
+      tf("Umidade excessiva afeta mais os rótulos que o vinho.", true, "O mofo costuma atingir rótulos e caixas."),
+      q("No Brasil, o que costuma ser a maior preocupação na guarda?", ["Umidade", "Calor", "Neve", "Altitude"], 1, "Altas temperaturas são o maior risco."),
+    ],
+  },
+  {
+    title: "Adega climatizada",
+    intro: "Útil para quem guarda vinhos por meses ou anos, sobretudo em clima quente.",
+    body: [
+      "Adegas por compressor resfriam com mais eficiência e lidam melhor com ambientes quentes. Adegas termoelétricas são silenciosas e vibram menos, mas têm dificuldade em ambientes muito quentes.",
+      "Adegas com duas zonas permitem guardar tintos e brancos em temperaturas diferentes ou usar uma zona para serviço.",
+      "Escolha a capacidade pensando no seu ritmo de consumo, e lembre que o fabricante costuma calcular capacidade com garrafas bordalesas finas.",
+    ],
+    takeaway: "Compressor para climas quentes; duas zonas para flexibilidade.",
+    practice: "Conte quantas garrafas você costuma ter em casa e estime a capacidade que faria sentido.",
+    mistake: "Instalar uma adega termoelétrica em um ambiente muito quente e sem ventilação.",
+    quiz: [
+      q("Qual tipo de adega lida melhor com ambientes quentes?", ["Termoelétrica", "Compressor", "Nenhuma", "Adega sem energia"], 1, "O compressor tem maior capacidade de resfriamento."),
+      tf("Adegas de duas zonas permitem temperaturas diferentes.", true, "É útil para tintos e brancos."),
+      q("Por que a capacidade anunciada pode enganar?", ["Considera garrafas finas padrão", "É sempre falsa", "Considera garrafas de 5 litros", "Não engana"], 0, "Garrafas mais largas ocupam mais espaço."),
+    ],
+  },
+  {
+    title: "Conservação após abertura",
+    intro: "Depois de aberto, o vinho começa a oxidar.",
+    body: [
+      "Recoloque a rolha ou use uma tampa e guarde a garrafa na geladeira — inclusive tintos. O frio desacelera a oxidação. Retire o tinto um pouco antes de servir.",
+      "Tintos e brancos costumam durar de dois a quatro dias; espumantes, com tampa própria, um a dois dias; fortificados, semanas ou meses.",
+      "Bombas de vácuo e sistemas com gás inerte ampliam esse prazo. Transferir o vinho para uma garrafa menor, cheia até a boca, também ajuda.",
+    ],
+    takeaway: "Feche, refrigere e reduza o contato com o ar.",
+    practice: "Abra um vinho, prove no primeiro e no terceiro dia (guardado na geladeira) e anote as diferenças.",
+    mistake: "Deixar a garrafa aberta fora da geladeira por dias.",
+    quiz: [
+      q("Onde guardar um tinto aberto?", ["Na prateleira", "Na geladeira", "No congelador", "Ao sol"], 1, "O frio desacelera a oxidação."),
+      q("Quanto tempo um fortificado costuma durar aberto?", ["Algumas horas", "Semanas ou meses", "Exatamente um dia", "Nada"], 1, "O álcool e o açúcar os protegem."),
+      tf("Transferir o vinho para uma garrafa menor e cheia ajuda a conservá-lo.", true, "Menos ar, menos oxidação."),
+    ],
+  },
+  {
+    title: "Decantação",
+    intro: "Decantar serve a dois propósitos: separar sedimentos ou oxigenar.",
+    body: [
+      "Vinhos velhos podem ter sedimentos. Deixe a garrafa em pé por um dia e despeje lentamente no decanter, observando o gargalo contra uma luz; pare quando o depósito aparecer.",
+      "Vinhos jovens e tânicos podem se beneficiar de oxigenação: o ar ajuda a abrir aromas e suavizar a sensação de tanino. Uma ou duas horas costumam bastar.",
+      "Vinhos muito velhos e frágeis devem ser decantados pouco antes de servir, pois podem perder aromas rapidamente.",
+    ],
+    takeaway: "Decante vinhos velhos para separar sedimentos e jovens tânicos para oxigenar.",
+    practice: "Divida um tinto jovem: metade no decanter por uma hora, metade direto da garrafa. Compare.",
+    mistake: "Decantar por horas um vinho muito antigo e delicado.",
+    quiz: [
+      q("Quais são os dois propósitos da decantação?", ["Esfriar e adoçar", "Separar sedimentos e oxigenar", "Filtrar e envelhecer", "Colorir e gaseificar"], 1, "São os usos clássicos do decanter."),
+      tf("Vinhos muito velhos devem ficar horas no decanter.", false, "Eles podem perder aromas rapidamente."),
+      q("Que vinho se beneficia mais de oxigenação?", ["Um tinto jovem e tânico", "Um espumante", "Um Moscato d'Asti", "Um branco leve"], 0, "O ar ajuda a abrir aromas e suavizar taninos."),
+    ],
+  },
+  {
+    title: "Aerador",
+    intro: "Um atalho para oxigenar o vinho no momento de servir.",
+    body: [
+      "O aerador acelera o contato do vinho com o ar enquanto ele é servido. Pode ajudar tintos jovens e fechados a mostrarem aromas mais rápido.",
+      "Ele não separa sedimentos e não substitui a decantação de vinhos antigos.",
+      "Experimente com e sem aerador: em alguns vinhos a diferença é clara; em outros, mínima.",
+    ],
+    takeaway: "O aerador é uma oxigenação rápida; útil para tintos jovens, inútil para separar sedimentos.",
+    practice: "Sirva duas taças do mesmo tinto, uma com aerador e outra sem, e compare.",
+    mistake: "Usar aerador em vinhos antigos com sedimento.",
+    quiz: [
+      q("Para que serve o aerador?", ["Separar sedimentos", "Oxigenar rapidamente o vinho", "Esfriar o vinho", "Adoçar o vinho"], 1, "Ele aumenta o contato com o ar ao servir."),
+      tf("O aerador substitui a decantação de vinhos antigos.", false, "Ele não separa sedimentos."),
+      q("Que vinho tende a se beneficiar do aerador?", ["Tinto jovem e fechado", "Espumante", "Porto antigo", "Moscato"], 0, "O ar ajuda a abrir aromas."),
+    ],
+  },
+  {
+    title: "Taças e abridores",
+    intro: "Poucos acessórios bem escolhidos resolvem quase tudo.",
+    body: [
+      "Para começar: um conjunto de taças universais, de vidro fino. Depois, se quiser, uma taça maior para tintos e outra para espumantes.",
+      "O saca-rolhas de garçom, com dois estágios, é compacto, barato e eficiente. Para rolhas velhas e frágeis, o abridor de lâminas (ah-so) ajuda a retirar a rolha sem esfarelar.",
+      "Lave as taças com pouco detergente e enxágue bem: resíduos de sabão e cheiro de armário alteram aromas. Secar com pano sem fiapos evita marcas.",
+    ],
+    takeaway: "Taças universais e um saca-rolhas de garçom atendem a quase todas as situações.",
+    practice: "Cheire uma taça recém-tirada do armário. Se houver cheiro, enxágue antes de servir.",
+    mistake: "Investir em muitos acessórios antes de ter boas taças.",
+    quiz: [
+      q("Qual saca-rolhas é compacto e eficiente?", ["Saca-rolhas de garçom", "Abridor elétrico de parede", "Faca", "Martelo"], 0, "É o favorito de muitos profissionais."),
+      q("Para que serve o abridor de lâminas?", ["Abrir espumantes", "Retirar rolhas velhas e frágeis", "Cortar cápsulas", "Esfriar garrafas"], 1, "Ele preserva rolhas que esfarelariam."),
+      tf("Resíduos de detergente podem alterar os aromas do vinho.", true, "Enxágue bem as taças."),
+    ],
+  },
+];
